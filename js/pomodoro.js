@@ -1,8 +1,9 @@
 // HTML  CSS  JS  Result
 // EDIT ON
 
+var audio = document.getElementById("sound");
+
 function play () {
-  var audio = document.getElementById("sound");
   audio.play();
 }
 
@@ -77,6 +78,7 @@ function play () {
       if(this.seconds == 0) {
         if(this.minutes == 0) {
           this.timerComplete();
+          play();
           return;
         }
         this.seconds = 59;
